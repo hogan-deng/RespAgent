@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "args": []                               
+    },
+    {
+      "name": "Debug Multi Agent",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "multi_agent",
+      "args": [
+        "--feedback", "gen",
+        "--model", "gemini/gemini-3.1-flash-lite-preview",
+        "--version", "3",
+        "--count", "1"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug Web API - Auto Score",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "common.web_api",
+      "args": [
+        "rebuild_auto_score",
+        "--file_name", "13166.html",
+        "--root_path", "/gpt-5.1-codex-mini_01/multi_gen/iter_01",
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug Web API - Manual Score",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "common.web_api",
+      "args": [
+        "rebuild_manual_score",
+        "--file_name", "2976.html",
+        "--root_path", "/gpt-5.1-codex-mini_02/single/iter_01",
+        "--base_prior", "[[],[],[]]",
+        "--eval_prior", "[[\"003\"],[], []]",
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

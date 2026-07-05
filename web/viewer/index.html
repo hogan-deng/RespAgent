@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewer</title>
+  <link href="/common/min-style.css" rel="stylesheet" type="text/css" />
+  <!-- daisyUI + Tailwind + Preact + Zustand CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script type="importmap">
+    {"imports": {"preact": "https://esm.sh/htm@3/preact/standalone", "zustand": "https://esm.sh/zustand@4/vanilla"}}
+  </script>
+  
+</head>
+<body>
+  <!-- Rendered app will mount into body -->
+</body>
+<script type="module">
+  import { html, render } from "preact"
+  import { App } from "./app.js"
+  render(html`<${App} />`, document.body)
+</script>
+</html>
