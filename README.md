@@ -1,9 +1,9 @@
 # RespAgent
-Multimodal LLM-Based Agents for Automated Responsive Front-End Code Generation
+Multimodal Multi-Agent Systems for Responsive Front-End Code Generation
 
 
 ## Overview
-(Overview content ...)
+We propose AgentGen+, a multi-agent framework for responsive web page generation, and introduce a benchmark dataset and evaluation metrics for assessing cross-resolution fidelity and consistency. Across six screen resolutions, AgentGen+ significantly outperforms both single-reference and multi-reference baselines (p < 0.001), achieving the highest overall quality and reducing cross-resolution variability by 17%.
 
 ## Set Up
 This project is managed using `uv`. Run the following command to install dependencies:
